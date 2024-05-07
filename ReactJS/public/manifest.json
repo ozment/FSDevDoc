@@ -1,0 +1,43 @@
+The `manifest.json` file is a configuration file used in web applications, especially in Progressive Web Apps (PWAs), to provide information about the application on a user's home screen, primarily when the app is installed on a device. This JSON file allows you to control how your app appears to the user in areas that the browser allows, including icons, page navigation, and theme colors. Here are some common properties included in a typical `manifest.json` file:
+
+1. **name**: The name of the application as it will appear on the device.
+2. **short_name**: A shorter version of the name that will appear on the home screen or in places where space is limited.
+3. **icons**: An array of image objects representing the application icon in different sizes. This is necessary for adding the app to the home screen with an appropriate icon.
+4. **start_url**: The entry-point URL for the application, which gets opened when the app is launched from the home screen.
+5. **background_color**: The background color of the splash screen that is displayed when the app is launched.
+6. **display**: Specifies the preferred display mode for the app. Common values include `fullscreen`, `standalone`, `minimal-ui`, and `browser`.
+7. **orientation**: Locks the orientation to portrait or landscape for optimal viewing.
+8. **scope**: Defines the set of URLs that the browser considers to be within your app, and for which it won't display the browser’s address bar.
+9. **theme_color**: The theme color for the application which affects how the OS displays the app (e.g., the status bar color).
+10. **description**: A brief description of what the app does.
+11. **lang**: Specifies the primary language for the values in the manifest.
+
+### Example of a Simple `manifest.json` File:
+
+```json
+{
+  "name": "Example App",
+  "short_name": "App",
+  "icons": [
+    {
+      "src": "icon/lowres.webp",
+      "sizes": "48x48",
+      "type": "image/webp"
+    },
+    {
+      "src": "icon/hd_hi.ico",
+      "sizes": "72x72 96x96 128x128 256x256"
+    }
+  ],
+  "start_url": "/index.html",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "theme_color": "#FFFFFF",
+  "description": "A sample application",
+  "lang": "en"
+}
+```
+
+This configuration helps in defining how the application behaves and appears from a user interface perspective when accessed from a home screen icon or when running in a "standalone" mode, similar to a native application.
